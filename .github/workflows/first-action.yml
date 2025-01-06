@@ -16,6 +16,5 @@ jobs:
           python-version: '3.8'
 
       - name: Run Test
-        run: |
-          python addition.py
+        run: python addition.py
 
