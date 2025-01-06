@@ -1,0 +1,21 @@
+name: My First Github actions/checkout
+
+on: [push]
+
+jobs:
+  github-actions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.8,3.9'
+
+      - name: Run Test
+        run: |
+          python addition.py
+
